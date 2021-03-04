@@ -1,0 +1,56 @@
+<section class="container">
+  <header class="header">
+    <div class="header__logo">
+      <img src="assets/images/umbrella.png" class="header__image" />
+      <span class="header__text">Umbrella</span>
+    </div>
+    <div class="header__search">
+      <input
+        type="text"
+        class="header__search-input"
+        placeholder="Enter city..."
+      />
+      <button class="header__search-button">
+        <img src="assets/images/magnifier.png" class="header__search-img" />
+      </button>
+    </div>
+  </header>
+
+  <div class="weather">
+    <div class="weather__main">
+      <span class="weather__city">Lviv</span>
+      <p class="weather__temp">
+        <span class="weather__temp-number">5</span>
+        <span class="weather__temp-deg">&deg;</span>
+      </p>
+    </div>
+    <div class="weather__description-wrapper">
+      <span class="weather__description">
+        Clouds
+      </span>
+      <div class="weather__icon-wrapper">
+        <img [src]="iconUrl" class="weather__icon" />
+      </div>
+    </div>
+    <div class="weather__data">
+      <p class="weather__data-item">
+        <span class="weather__data-title">Pressure:</span>
+        <span class="weather__data-value"
+          >1021 mbar</span
+        >
+      </p>
+      <p class="weather__data-item">
+        <span class="weather__data-title">Humidity:</span>
+        <span class="weather__data-value"
+          >70 %</span
+        >
+      </p>
+      <p class="weather__data-item">
+        <span class="weather__data-title">Wind:</span>
+        <span class="weather__data-value">
+          2 m/s
+        </span>
+      </p>
+    </div>
+  </div>
+</section>
