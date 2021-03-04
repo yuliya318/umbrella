@@ -17,7 +17,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  &__image {
+  &__logo-image {
     width: 40px;
     height: 40px;
     margin-right: 5px;
@@ -25,6 +25,7 @@
   &__text {
     font-size: 26px;
     color: $color-primary-dark;
+    margin-right: 15px;
   }
   &__search {
     display: flex;
@@ -101,3 +102,17 @@
   }
 }
 
+@media screen and (max-width: 441px) {
+  .header {
+    justify-content: center;
+    &__logo,
+    &__search {
+      margin: 10px 0;
+    }
+  }
+  .weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
