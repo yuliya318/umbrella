@@ -23,4 +23,4 @@ export interface WeatherInfo {
       speed: number
     }
     name: string,
-  }
+}

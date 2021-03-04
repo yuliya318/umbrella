@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,11 +6,19 @@ import { Component, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public city: string;
+  @Output() city = new EventEmitter<string>();
+
+  public cityName: string;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  setCityName(): void {
+    if (this.cityName) {
+      this.city.emit(this.cityName);
+      this.cityName = '';
+    }
+  }
 }

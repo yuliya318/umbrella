@@ -19,7 +19,7 @@ export class WeatherService {
   }
 
   getWeatherByCityName(city: string): Observable<WeatherInfo> {
-    const fullUrl = `${environment.apiUrl}data/2.5/weather?q${city}&units=metric&appid=${environment.apiKey}`;
+    const fullUrl = `${environment.apiUrl}data/2.5/weather?q=${city}&units=metric&appid=${environment.apiKey}`;
     return this.http
       .get(fullUrl)
       .pipe(map((response: any) => response));

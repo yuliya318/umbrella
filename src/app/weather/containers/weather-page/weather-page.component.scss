@@ -3,57 +3,7 @@
 .container {
   background-color: $color-primary;
   min-height: 100vh;
-}
-.header,
-.weather {
   font-family: "Nunito", sans-serif;
-  padding: 10px 30px;
-  border-bottom: 3px solid $background-color-dark;
-  background-color: $background-color-light;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  &__logo-image {
-    width: 40px;
-    height: 40px;
-    margin-right: 5px;
-  }
-  &__text {
-    font-size: 26px;
-    color: $color-primary-dark;
-    margin-right: 15px;
-  }
-  &__search {
-    display: flex;
-    align-items: center;
-    &-input {
-      height: 32px;
-      border: none;
-      border-bottom: 2px solid $color-primary-dark;
-      margin-right: 5px;
-      font-family: "Nunito", sans-serif;
-      color: $color-primary-dark;
-    }
-    &-input:focus {
-      outline: none;
-    }
-    &-button {
-      height: 32px;
-      border: none;
-      background: none;
-    }
-    &-img {
-      width: 26px;
-      height: 26px;
-    }
-    &-img:hover {
-      transform: scale(1.05);
-    }
-  }
 }
 
 .weather {
@@ -102,14 +52,7 @@
   }
 }
 
-@media screen and (max-width: 461px) {
-  .header {
-    justify-content: center;
-    &__logo,
-    &__search {
-      margin: 10px 0;
-    }
-  }
+@media screen and (max-width: $mobile-size) {
   .weather {
     display: flex;
     flex-direction: column;

@@ -8,10 +8,10 @@
       type="text"
       class="header__search-input"
       placeholder="Enter city..."
-      [(ngModel)]="city"
-      name="city"
+      [(ngModel)]="cityName"
+      name="cityName"
     />
-    <button class="header__search-button">
+    <button class="header__search-button" (click)="setCityName()">
       <img src="assets/images/magnifier.png" class="header__search-img" />
     </button>
   </div>

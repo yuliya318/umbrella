@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { WeatherInfo } from '../../interfaces/weather-info.interface';
 import { WeatherService } from '../../services/weather.service';
@@ -41,10 +41,17 @@ export class WeatherPageComponent implements OnInit, OnDestroy {
       });
   }
 
+  getWeatherByCityName(city: string): void {
+    this.weatherInfoSubcription = this.weatherService
+      .getWeatherByCityName(city)
+      .subscribe((response) => {
+        this.weatherInfo = response;
+        this.setWeatherIconUrl(response.weather[0].icon);
+      });
+  }
+
   setWeatherIconUrl(iconID: string): void {
     this.iconUrl = `${environment.iconUrl}img/wn/${iconID}@2x.png`;
     console.log(this.iconUrl);
-    
   }
 }
-

@@ -1,22 +1,7 @@
 <section class="container">
-    <header class="header">
-      <div class="header__logo">
-        <img src="assets/images/umbrella.png" class="header__image" />
-        <span class="header__text">Umbrella</span>
-      </div>
-      <div class="header__search">
-        <input
-          type="text"
-          class="header__search-input"
-          placeholder="Enter city..."
-        />
-        <button class="header__search-button">
-          <img src="assets/images/magnifier.png" class="header__search-img" />
-        </button>
-      </div>
-    </header>
+    <app-header (city)="getWeatherByCityName($event)"></app-header>
   
-    <div class="weather" *ngIf="weatherInfo">
+    <div class="weather page-block" *ngIf="weatherInfo">
       <div class="weather__main">
         <span class="weather__city">{{ weatherInfo.name }}</span>
         <p class="weather__temp">
