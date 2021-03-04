@@ -42,8 +42,7 @@ export class WeatherPageComponent implements OnInit, OnDestroy {
   }
 
   setWeatherIconUrl(iconID: string): void {
-    // this.iconUrl = `${environment.apiUrl}img/wn/${iconID}@2x.png`;
-    this.iconUrl = environment.apiUrl + 'img/wn/' + iconID + '@2x.png';
+    this.iconUrl = `${environment.iconUrl}img/wn/${iconID}@2x.png`;
     console.log(this.iconUrl);
     
   }
